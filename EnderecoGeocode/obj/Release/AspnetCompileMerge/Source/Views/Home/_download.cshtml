@@ -1,0 +1,16 @@
+﻿@using (Html.BeginForm("Upload", "Home", null, FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary()
+
+    <div class="form-group">
+        <input type="file" id="dataFile" name="upload" style="max-width:600px" />
+    </div>
+
+    <div class="form-group">
+        <input type="submit" value="Ler arquivo" class="btn" />
+    </div>
+
+    <br />
+
+}
